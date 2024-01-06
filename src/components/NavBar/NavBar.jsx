@@ -10,9 +10,9 @@ const NavBar = () => {
         <img className={estilos.logo} src={logo} alt="" />
 
         <ul className={estilos.menu}>
-          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Remeras</a></li>
-          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Chombas</a></li>
-          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Bermudas</a></li>
+          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Celulares</a></li>
+          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Tablets</a></li>
+          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Notebooks</a></li>
         </ul>
 
         <div className={estilos.derecha}>
