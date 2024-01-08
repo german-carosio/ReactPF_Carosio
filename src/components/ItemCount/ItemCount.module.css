@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 2px var(--gris);
+    padding: 20px;
+}
+
+.count {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    width: 20px;
+    text-align: center;
+}
+
+.btnCount {
+    width: max-content;
+    padding: 5px 10px;
+}
+
+.btnsCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+}

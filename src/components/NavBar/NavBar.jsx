@@ -2,17 +2,20 @@ import React from 'react'
 import logo from '../../assets/logo.png'
 import estilos from './NavBar.module.css'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <>
       <nav className={estilos.container}>
-        <img className={estilos.logo} src={logo} alt="" />
-
+        <Link to={'/'}>
+          <img className={estilos.logo} src={logo} alt="imagen logo" />
+        </Link>
+        
         <ul className={estilos.menu}>
-          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Celulares</a></li>
-          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Tablets</a></li>
-          <li className={estilos.menuItem}><a href="#" className={estilos.menuLink}>Notebooks</a></li>
+          <li className={estilos.menuItem}><NavLink to={`/category/interior`} className={estilos.menuLink}>interior</NavLink></li>
+          <li className={estilos.menuItem}><NavLink to={`/category/exterior`} className={estilos.menuLink}>Exterior</NavLink></li>
+          <li className={estilos.menuItem}><NavLink to={`/category/suculentas`} className={estilos.menuLink}>Suculentas</NavLink></li>
         </ul>
 
         <div className={estilos.derecha}>
@@ -22,7 +25,6 @@ const NavBar = () => {
           <span className="material-symbols-outlined">
             account_circle
           </span>
-          <p className={estilos.userTxt}>Ingresar/Registarse</p>
           </div>
 
           <CartWidget />

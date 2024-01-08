@@ -1,26 +1,28 @@
 .container{
-    padding: 20px;
-    border: solid 1px var(--gris);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
+    text-align: center;
+    gap: 10px;  
+    border: solid 1px var(--gris);
+    padding: 20px 0;
 }
 
 .imgContainer{
-    width: 300px;
+    width: 100%;
     overflow: hidden;
 }
 
 
 .imgContainer img {
     width: 100%;
+    max-width: 250px;
+    height: 350px;
     object-fit: cover;
     transition: all 0.3s;
+    border-radius: 5px;
 }
 
-/* .imgContainer img:hover {
-    transform: scale(1.2);
-} */
+
 

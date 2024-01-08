@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 80px auto 20px auto;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.detailImg {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* .detailImg:hover {
+    transform: scale(1.3);
+} */
