@@ -4,6 +4,7 @@
     gap: 10px;
     border: solid 2px var(--gris);
     padding: 20px;
+    max-width: 300px;
 }
 
 .count {
@@ -29,5 +30,5 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 300px;
+    padding: 0 20px;
 }
