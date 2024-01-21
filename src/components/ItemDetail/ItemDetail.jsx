@@ -1,8 +1,25 @@
-import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import styles from './ItemDetail.module.css'
+import { useCart  } from '../../context/CartContext';
+import { useState } from 'react';
+
 
 const ItemDetail = ({ id, name, img, price, category, stock, description }) => {
+
+    const [quantity, setQuantity] = useState(1)
+
+    const {addItem} = useCart()
+    
+    const addCart = (quantity)=>{ 
+        
+        const objProductToAdd = {
+            id, name, price, quantity
+        }
+
+        addItem(objProductToAdd)
+        setQuantity(quantity)
+    }
+
     return (
         <>
             <div className={styles.container}>
@@ -13,8 +30,7 @@ const ItemDetail = ({ id, name, img, price, category, stock, description }) => {
                     <p>Categoría: {category}</p>
                     <p>Descripción: {description}</p>
                     <p>stock: {stock}</p>
-
-                    <ItemCount initial={1} stock={stock} onAdd={(quantity)=>{console.log('Cantidad agregada', quantity)}}/>
+                    <ItemCount stock={stock} addCart={addCart} quantity={quantity} setQuantity={setQuantity}/>
                 </div>
 
                 

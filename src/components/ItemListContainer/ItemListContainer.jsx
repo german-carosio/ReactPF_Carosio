@@ -6,9 +6,6 @@ import { useParams } from 'react-router-dom'
 import { mayus } from '../../Functions'
 import Order from '../Order/Order'
 
-//https://www.youtube.com/watch?v=OGwPjSxm1lU paginación
-
-
 const ItemListContainer = () => {
 
   const [products, setProducts] = useState([])
@@ -16,10 +13,9 @@ const ItemListContainer = () => {
 
   const { categoryId } = useParams()
 
+
   useEffect(() => {
-
     const asyncFunc = categoryId ? getProductByCategory : getProducts
-
     asyncFunc(categoryId)
       .then(response => {
         setProducts(response)
