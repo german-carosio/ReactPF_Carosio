@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const CartView = () => {
 
-  const { cart, total, removeItem } = useCart()
+  const { cart, total, removeItem, clear } = useCart()
 
   return (
     <>
@@ -31,8 +31,9 @@ delete
           <h2>Total: ${total}</h2>
         </div>
 
-        <div>
+        <div className={styles.btns}>
           <Link to= {'/checkout'}><button className='btn1'>Confirmar compra</button></Link>
+          <button className='btn2' onClick={()=>{clear()}}>Eliminar carrito</button>  
         </div>
 
       </section>
