@@ -1,3 +1,32 @@
 .container {
     margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    margin: 0 auto;
+    padding: 20px;
+    width: 800px;
+}
+
+.img {
+    height: 50px;
+}
+
+.btn {
+    width: max-content;
+    padding: 8px 10px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    border-radius: 4px;
+    font-size: 1em;
 }

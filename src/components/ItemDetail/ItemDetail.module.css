@@ -23,9 +23,15 @@
     border-radius: 5px;
 }
 
-/* .detailImg:hover {
-    transform: scale(1.3);
-} */
+.btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: solid 2px var(--gris);
+}
 
 @media(min-width:680px) {
     .container {

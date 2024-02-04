@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import styles from './ItemCount.module.css'
-import { Link, NavLink } from 'react-router-dom'
 
-const ItemCount = ({ stock, addCart, quantity, setQuantity }) => {
+
+
+const ItemCount = ({ stock, addCart, quantity, setQuantity, onAdd }) => {
 
     const add = () => {
         if (quantity < stock) {
@@ -24,9 +25,7 @@ const ItemCount = ({ stock, addCart, quantity, setQuantity }) => {
             </div>
 
             <div className={styles.btnsCart}>
-                <button className='btn1' onClick={() => addCart(quantity)} >Agregar al carrito</button>
-                <Link to={`/cart`}><button className='btn2' >Ir al carrito</button></Link>
-                
+                <button className='btn1' onClick={() => addCart(quantity) } >Agregar al carrito</button>
             </div>
             
 

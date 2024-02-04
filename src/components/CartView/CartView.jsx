@@ -4,15 +4,42 @@ import { useCart } from '../../context/CartContext'
 
 const CartView = () => {
 
-  
+  const { cart, total, removeItem } = useCart()
 
   return (
     <>
-        <div className={styles.container}>
-            <h1>CartView</h1>
+      <section className={styles.container}>
+        <h1>CartView</h1>
+        {
+          cart.map(prod => {
+            return (
+              <div className={styles.item} key={prod.id}>
+                <img className={styles.img} src={prod.img} alt="" />
+                <h3>{prod.name}</h3>
+                <h4>Precio: ${prod.price}</h4>
+                <p>x {prod.quantity}</p>
+                <h4>Subtotal: ${prod.quantity * prod.price}</h4>
+                <button className={styles.btn} onClick={()=>removeItem(prod.id)}><span className="material-symbols-outlined">
+delete
+</span> </button>
+              </div>
+            )
+          })
+        }
+        <div>
+          <h2>Total: ${total}</h2>
         </div>
+
+        <div>
+          <button className='btn1'>Confirmar compra</button>
+        </div>
+
+      </section>
+
+
+
     </>
-    
+
   )
 }
 
