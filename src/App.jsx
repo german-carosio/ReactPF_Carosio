@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import CartView from './components/CartView/CartView'
+import Checkout from './components/Checkout/Checkout'
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
               {/* el nombre que le de al params es el mismo que luego debo usar en el componente para identificar el id (useParams) */}
               <Route path='/item/:id' element={<ItemDetailContainer />} />
               <Route path='/cart' element={<CartView />} />
-              <Route path='/checkout' element={<h1>Checkout</h1>} />
+              <Route path='/checkout' element={<Checkout/>} />
               <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+              
             </Routes>
             </CartProvider>
         </BrowserRouter>

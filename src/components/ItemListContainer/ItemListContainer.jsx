@@ -54,8 +54,9 @@ const ItemListContainer = () => {
 
   return (
     <>
+      
       <div className={styles.container}>
-
+        
         <Order setProducts={setProducts} products={products} productsCopy={productsCopy} />
 
         <h3>{mayus(categoryId ? categoryId : 'Todas las plantas')}</h3>

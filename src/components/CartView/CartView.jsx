@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './CartView.module.css'
 import { useCart } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const CartView = () => {
 
@@ -31,7 +32,7 @@ delete
         </div>
 
         <div>
-          <button className='btn1'>Confirmar compra</button>
+          <Link to= {'/checkout'}><button className='btn1'>Confirmar compra</button></Link>
         </div>
 
       </section>

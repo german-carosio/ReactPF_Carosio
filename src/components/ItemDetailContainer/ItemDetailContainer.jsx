@@ -11,6 +11,7 @@ const ItemDetailContainer = () => {
 
     const {id} = useParams()
 
+    
     useEffect(()=>{
         /* getProductById(parseInt(id))
         .then(response =>{
