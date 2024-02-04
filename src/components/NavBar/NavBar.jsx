@@ -13,6 +13,7 @@ const NavBar = () => {
         </Link>
         
         <ul className={estilos.menu}>
+          <li className={estilos.menuItem}><NavLink to={`/`} className={estilos.menuLink}>Todos</NavLink></li>
           <li className={estilos.menuItem}><NavLink to={`/category/interior`} className={estilos.menuLink}>interior</NavLink></li>
           <li className={estilos.menuItem}><NavLink to={`/category/exterior`} className={estilos.menuLink}>Exterior</NavLink></li>
           <li className={estilos.menuItem}><NavLink to={`/category/suculentas`} className={estilos.menuLink}>Suculentas</NavLink></li>
@@ -27,7 +28,7 @@ const NavBar = () => {
           </span>
           </div>
 
-          <CartWidget />
+          <Link className={estilos.cart} to={`/cart`}><CartWidget /></Link>
           
         </div>
 

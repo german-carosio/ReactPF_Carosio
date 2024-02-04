@@ -26,7 +26,7 @@
     list-style: none;
 }
 
-.menuLink {
+.menuLink, .cart {
     color: var(--negro);
     text-decoration: none;
 }
