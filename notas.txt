@@ -1,0 +1,8 @@
+Les comparto las variables de entorno para configurar el .env de mi proyecto:
+
+VITE_apiKey=AIzaSyBVqNWsbqwjnigygbmJKEkorzu_z4ItoBg
+VITE_authDomain=planta-aab63.firebaseapp.com
+VITE_projectId=planta-aab63
+VITE_storageBucket=planta-aab63.appspot.com
+VITE_messagingSenderId=24198091411
+VITE_appId=1:24198091411:web:ae5e5aef79a2f271afb366
