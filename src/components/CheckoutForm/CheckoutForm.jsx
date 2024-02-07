@@ -27,12 +27,12 @@ const CheckoutForm = ({onConfirm}) => {
 
             <label>
                 Telefono
-            <input type="text" value={phone} onChange={({target})=> setName(target.value)} />
+            <input type="text" value={phone} onChange={({target})=> setPhone(target.value)} />
             </label>
 
             <label>
                 Email
-            <input type="text" value={email} onChange={({target})=> setName(target.value)} />
+            <input type="text" value={email} onChange={({target})=> setEmail(target.value)} />
             </label>
             
             <button type='submit'> Crear orden</button>

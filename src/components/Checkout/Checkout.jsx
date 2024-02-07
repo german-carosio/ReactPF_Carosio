@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
 import { useCart } from '../../context/CartContext';
-import { collection, query, where, getDocs, documentId, writeBatch, addDoc } from 'firebase/firestore';
+import { collection, query, where, getDocs, documentId, writeBatch, addDoc, Timestamp } from 'firebase/firestore';
 import { db } from '../../services/firebase/firebaseConfig';
 import styles from './Checkout.module.css';
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false)
   const [orderId, setOrderId] = useState(null)
   const { cart, total, clearCart } = useCart();
 
-  const createOrder = async (userData) => {
+  const createOrder = async ({name, phone, email}) => {
+
     setLoading(true)
+
     try {
       const objOrder = {
         buyer: {
-          name: 'German', phone: 1161245051, email: 'german@geman.com'
+          name, phone, email
         },//userData
         items: cart,
         total: total,
+        //date: Timestamp.fromDate(new Date())
       }
 
       const batch = writeBatch(db)
@@ -63,6 +67,8 @@ const Checkout = () => {
 
         setOrderId(id)
 
+        console.log(name, phone, email, id);
+
         clearCart()
 
       } else {
@@ -78,19 +84,18 @@ const Checkout = () => {
   }
 
   if (loading) {
-    return <h1 className={styles.orderId}>Se esta generando su orden, aguarde por favor </h1>
+    return <p className={styles.orderId}>Loading... </p>
   }
 
   if (orderId) {
     return <h1 className={styles.orderId}>El id de su compra es: {orderId}</h1>
-    
   }
 
   return (
     <>
       <div className={styles.container}>
         <h1>Checkout</h1>
-        <button onClick={createOrder}>Crear orden</button>
+        <CheckoutForm onConfirm={createOrder} />
       </div>
     </>
   );
