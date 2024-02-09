@@ -1,7 +1,7 @@
 # Planta 
 App en desarrollo
 
-Esta app fue creada utilizando React js  + Vite y Firebase. Para poder ejectutarla de manera local el usuario debe comntar con su propia databease en Firebase.
+Esta app fue creada utilizando React js  + Vite y Firebase. Para poder ejectutarla de manera local el usuario debe contar con su propia base de datos en Firebase.
 
 ## Correr de manera local
 
