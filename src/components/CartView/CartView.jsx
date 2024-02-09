@@ -26,7 +26,7 @@ const CartView = () => {
 
                   Swal.fire({
                     title: "¿Esta seguro?",
-                    text: "Eliminara de forma permanente el item",
+                    text: `Eliminara de forma permanente ${prod.name}`,
                     icon: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#3085d6",
@@ -36,7 +36,7 @@ const CartView = () => {
                     if (result.isConfirmed) {
                       Swal.fire({
                         title: "Eliminado!",
-                        text: "El item fue eliminado",
+                        text: `${prod.name} fue eliminado`,
                         icon: "success"
                       });
                       removeItem(prod.id)
@@ -57,7 +57,10 @@ const CartView = () => {
         </div>
 
         <div className={styles.btns}>
-          <Link to={'/checkout'}><button className='btn1'>Crear Orden</button></Link>
+          
+         {cart.length !==0 ? <Link to={'/checkout'}><button className='btn1'>Crear Orden</button></Link> : <button className='btn1'>Crear Orden</button>}
+            
+          
           <button className='btn2' onClick={() => {
             
             if (cart.length !== 0) {

@@ -8,3 +8,15 @@
 .container button {
     cursor: pointer;
 }
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 0;
+}
+
+.btn:focus {
+    background-color: var(--verde);
+    color: var(--blanco);
+    
+}
