@@ -11,18 +11,12 @@ $ npm install
 $ npm run dev
 
 
-## Variables de Entorno
-
-Ver [`.env.exaple`](https://github.com/Fede-Diiorio/ReactPF_Di-Iorio/blob/main/.env.example) como un ejemplo
-
 ## Construido Usando
 
 - React + Vite
 - Firebase
 - CSS puro
 - SweetAlert2
-
-
 
 
 ## Testear Aplicación
