@@ -20,6 +20,70 @@ textarea {
     font-size: 1em;
 }
 
+/**/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blanco);
+    border-bottom: solid 1px var(--negro);
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    border-bottom: solid 1px;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    height: 60px;
+}
+
+.menu {
+    display: none;
+    gap: 20px;
+}
+
+.menuItem {
+    list-style: none;
+}
+
+.menuLink {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+.cart {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+
+.derecha {
+    display: flex;
+    gap: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.userTxt {
+    font-size: 0.8em;
+}
+
+@media(min-width:900px) {
+    .menu {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+/**/
+
 
 .container {
     max-width: 1366px;

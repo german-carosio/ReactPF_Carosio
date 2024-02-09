@@ -2,33 +2,33 @@ import React from 'react'
 import logo from '../../assets/logo.png'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
-import styles from './NavBar.module.css'
+
 
 const NavBar = () => {
   return (
     <>
-      <nav >
+      <nav className='header' >
         <Link to={'/'}>
-          <img className={styles.logo} src={logo} alt="imagen logo" />
+          <img className='logo'  src={logo} alt="imagen logo" />
         </Link>
         
-        <ul className={styles.menu}>
-          <li className={styles.menuItem}><NavLink to={`/`} className={styles.menuLink}>Todos</NavLink></li>
-          <li className={styles.menuItem}><NavLink to={`/category/interior`} className={styles.menuLink}>interior</NavLink></li>
-          <li className={styles.menuItem}><NavLink to={`/category/exterior`} className={styles.menuLink}>Exterior</NavLink></li>
-          <li className={styles.menuItem}><NavLink to={`/category/suculentas`} className={styles.menuLink}>Suculentas</NavLink></li>
+        <ul className='menu'>
+          <li className='menuItem'><NavLink className='menuLink' to={`/`}>Todos</NavLink></li>
+          <li className='menuItem'><NavLink className='menuLink' to={`/category/interior`}>interior</NavLink></li>
+          <li className='menuItem'><NavLink className='menuLink' to={`/category/exterior`}>Exterior</NavLink></li>
+          <li className='menuItem'><NavLink className='menuLink' to={`/category/suculentas`}>Suculentas</NavLink></li>
         </ul>
 
-        <div className={styles.derecha}>
+        <div className='derecha'>
 
-          <div className={styles.user}>
+          <div className='user'>
             
           <span className="material-symbols-outlined">
             account_circle
           </span>
           </div>
 
-          <Link className={styles.cart} to={`/cart`}><CartWidget /></Link>
+          <Link className='cart' to={`/cart`}><CartWidget /></Link>
           
         </div>
 
