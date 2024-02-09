@@ -5,11 +5,12 @@ Esta app fue creada utilizando React js  + Vite y Firebase. Para poder ejectutar
 
 ## Correr de manera local
 
+```bash
 $ git clone https://github.com/german-carosio/ReactPF_Carosio.git
 $ cd ReactPF_Carosio
 $ npm install
 $ npm run dev
-
+```
 
 ## Construido Usando
 
