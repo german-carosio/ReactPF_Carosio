@@ -1,7 +1,7 @@
 # Planta 
 App en desarrollo
 
-Esta app fue creada utilizando React js  + Vite y Firebase. Para poder ejectutarla de manera local el usuario debe contar con su propia base de datos en Firebase.
+Esta app fue creada utilizando React js + Vite y Firebase. Para poder ejectutarla de manera local el usuario debe contar con su propia base de datos.
 
 ## Correr de manera local
 
@@ -22,4 +22,4 @@ $ npm run dev
 
 ## Testear Aplicación
 
-[Deploy](https://react-pf-carosio.vercel.app/)https://react-pf-carosio.vercel.app/)
+[Deploy](https://react-pf-carosio.vercel.app/)
