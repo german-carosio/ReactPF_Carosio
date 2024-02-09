@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import styles from './NavBar.module.css';
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
+import styles from './NavBar.module.css'
 
 const NavBar = () => {
   return (
     <>
-      <nav className={styles.container}>
+      <nav >
         <Link to={'/'}>
           <img className={styles.logo} src={logo} alt="imagen logo" />
         </Link>
