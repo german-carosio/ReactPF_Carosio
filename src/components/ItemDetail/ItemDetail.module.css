@@ -4,6 +4,7 @@
  border: none;
  cursor: pointer;
  width: max-content;
+ margin-left: 30px;
 }
 
 .container {

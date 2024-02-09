@@ -42,8 +42,8 @@ const ItemDetail = ({ id, name, img, price, category, stock, description }) => {
                     {
                         checkAdd
                             ? (<div className={styles.btns}>
-                                <Link to='/cart'><button className='btn1'>ir al carrito</button></Link>
                                 <Link to='/'><button className='btn2'>Seguir comprando</button></Link>
+                                <Link to='/cart'><button className='btn1'>ir al carrito</button></Link>
                             </div>)
                             : (<ItemCount stock={stock} addCart={addCart} quantity={quantity} setQuantity={setQuantity} />)
                     }

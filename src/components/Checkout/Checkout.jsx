@@ -4,13 +4,14 @@ import { collection, query, where, getDocs, documentId, writeBatch, addDoc, Time
 import { db } from '../../services/firebase/firebaseConfig';
 import styles from './Checkout.module.css';
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false)
   const [orderId, setOrderId] = useState(null)
   const { cart, total, clearCart } = useCart();
 
-  const createOrder = async ({name, phone, email}) => {
+  const createOrder = async ({name, phone, email} /* userData */) => {
 
     setLoading(true)
 
@@ -18,7 +19,7 @@ const Checkout = () => {
       const objOrder = {
         buyer: {
           name, phone, email
-        },//userData
+        },
         items: cart,
         total: total,
         //date: Timestamp.fromDate(new Date())
@@ -94,7 +95,10 @@ const Checkout = () => {
   return (
     <>
       <div className={styles.container}>
-        <h1>Checkout</h1>
+        {/* volver a pagina anterior */}
+        <button className={styles.back} onClick={() => { <Link to={window.history.back()}></Link> }}><span className="material-symbols-outlined">
+                arrow_back_ios
+            </span></button>
         <CheckoutForm onConfirm={createOrder} />
       </div>
     </>
