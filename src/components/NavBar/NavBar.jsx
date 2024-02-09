@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import classes from './NavBar.module.css'
+/* import classes from './NavBar.module.css'; */
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <>
-      <nav className={classes.container}>
+   {/*    <nav className={classes.container}>
         <Link to={'/'}>
           <img className={classes.logo} src={logo} alt="imagen logo" />
         </Link>
@@ -32,7 +32,7 @@ const NavBar = () => {
           
         </div>
 
-      </nav>
+      </nav> */}
     </>
   )
 }
