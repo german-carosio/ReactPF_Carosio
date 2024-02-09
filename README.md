@@ -1,8 +1,30 @@
-# React + Vite
+# Planta 
+App en desarrollo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta app fue creada utilizando React js  + Vite y Firebase. Para poder ejectutarla de manera local el usuario debe comntar con su propia databease en Firebase.
 
-Currently, two official plugins are available:
+## Correr de manera local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+$ git clone 
+$ cd 
+$ npm install
+$ npm run dev
+
+
+## Variables de Entorno
+
+Ver [`.env.exaple`](https://github.com/Fede-Diiorio/ReactPF_Di-Iorio/blob/main/.env.example) como un ejemplo
+
+## Construido Usando
+
+- React + Vite
+- Firebase
+- CSS puro
+- SweetAlert2
+
+
+
+
+## Testear Aplicación
+
+[Deploy](https://link)
