@@ -26,10 +26,16 @@
     list-style: none;
 }
 
-.menuLink, .cart {
+.menuLink {
     color: var(--negro);
     text-decoration: none;
 }
+
+.cart {
+    color: var(--negro);
+    text-decoration: none;
+}
+
 
 .derecha {
     display: flex;
